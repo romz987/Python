@@ -15,4 +15,17 @@ def bill_hates():
     )
 
 
-bill_hates()
+def even_numbers(num_one: int, num_two: int):
+    """ 
+    Выводит все четные числа в заданном пользователем
+    диапазоне
+
+    :num_one: нижняя граница диапазона 
+    :num_two: верхняя граница диапазона
+    :return: None 
+    """
+    for i in range(num_one, num_two + 1):
+        if i % 2 == 0:
+            print(i)
+
+
