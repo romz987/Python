@@ -51,4 +51,22 @@ def art_square(length: int, empty: bool):
             print('#'.ljust(length * 3, "#"))
 
 
+def min_number(*args):
+    """
+    Если указано пять чисел в качестве аргументов 
+    выводит минимальное из них
+
+    :return: None
+    """
+    if len(args) != 5:
+        print('Неверные аргументы')
+    
+    var = args[0]
+    for i in args:
+        if i < var:
+            var = i 
+
+    print(var)
+
+
 
