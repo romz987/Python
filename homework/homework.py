@@ -86,3 +86,18 @@ def numbers_product(num_one: int, num_two: int):
             result *= i
 
     print(result)
+    
+
+def num_length(num_one: int):
+    """  
+    Выводит количество цифр в числе.
+    Число передается в качестве аргумента.
+
+    :num_one: натуральное число
+    :return: None
+    """
+    string = str(num_one)
+
+    print(f'В числе {len(string)} цифр')
+
+
