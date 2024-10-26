@@ -69,4 +69,20 @@ def min_number(*args):
     print(var)
 
 
+def numbers_product(num_one: int, num_two: int):
+    """ 
+    Произведение чисел в переданном диапазоне с нормализацией
+    
+    :num_one: нижняя граница диапазона
+    :num_two: верхняя граница диапазона
+    :return: None
+    """
+    if num_one > num_two:
+        num_one, num_two = num_two, num_one 
 
+    result = 1
+    for i in range(num_one, num_two + 1):
+        if i != 0:
+            result *= i
+
+    print(result)
