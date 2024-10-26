@@ -29,3 +29,26 @@ def even_numbers(num_one: int, num_two: int):
             print(i)
 
 
+def art_square(length: int, empty: bool):
+    """
+    Выводит квадрат указанной длинны стороны 
+    из указанного символа
+
+    :length: длинна стороны
+    :empty: True - пустой квадрат, False - заполненный квадрат
+    :return: None
+    """
+
+    if empty:
+        for i in range(0, length):
+            if i == 0 or i == length - 1:
+                print('#'.ljust(length * 3, "#"))
+            else:
+                print('#' + (length * 3 -2) * ' ' + '#')
+
+    else:
+        for _ in range(0, length):
+            print('#'.ljust(length * 3, "#"))
+
+
+
