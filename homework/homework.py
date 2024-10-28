@@ -2,7 +2,7 @@
 
 def bill_hates():
     """
-    Выводит на экран цитату Билла Гейтса
+Выводит на экран цитату Билла Гейтса
 
     :return: None
     """
@@ -101,3 +101,23 @@ def num_length(num_one: int):
     print(f'В числе {len(string)} цифр')
 
 
+def num_palindrome(num_one: int) -> bool:
+    """
+    Проверяет, является ли переданное в качестве аргумента
+    число палиндромом и возвращает булево значение 
+
+    :num_one: натуральное число 
+    :return: bool 
+    """
+    reversed_number = ""
+    base_number = str(num_one)
+
+    while num_one > 0:
+        temp_var = num_one % 10 
+        num_one = num_one // 10
+        reversed_number += str(temp_var)
+    print(f'reversed number: {reversed_number}')
+    if base_number == reversed_number:
+        print('Это палиндром!')
+    else:
+        print('Это не палиндром')
