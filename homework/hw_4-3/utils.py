@@ -1,4 +1,4 @@
-def get_reg_data() -> list:
+def get_reg_data() -> list[dict]:
     """
     Возвращает список паттернов регулярных выражений
     для проверки пользовательских данных
@@ -6,9 +6,9 @@ def get_reg_data() -> list:
     :return: список паттернов
     """
     patterns_list = [
-        'pattern-one',
-        'pattern-two',
-        'pattern-three'
+        {'name_pattern': r'^[a-zA-Zа-яА-ЯёЁ]+$'},
+        {'phone_pattern': r'^\+\d{1,3}\(\d{2}\)\d{7}$'},
+        {'email_pattern': r'^[a-zA-Z0-9]+@yandex\.ru$'}
     ]
 
     return patterns_list
