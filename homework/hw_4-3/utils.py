@@ -50,6 +50,7 @@ def check_unique_data(user_data: str, users_list: list) -> bool:
     """
     for i in users_list:
         if user_data in i:
+            print('Такие данные уже кем-то используются!')
             return False 
 
     return True
