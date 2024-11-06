@@ -1,9 +1,11 @@
-import re
 from utils import get_reg_data, reg_check
 
 
 def set_user_data(question: str, reg_pattern_name: str, user_data_list: list, all_patterns_dict: dict, users_list: list) -> list:
-    """ 
+    """
+    Запрос пользовательских данных и их обаботка:
+    проверка на соотвествие шаблону
+    номер телефона и email проверяется на уникальность
 
     :param question: текст запроса данных пользователя
     :param reg_pattern_name: название паттерна для проверки
@@ -33,9 +35,11 @@ def set_user_data(question: str, reg_pattern_name: str, user_data_list: list, al
 
 def start_answers():
     """ 
-    Точка входа
+    Точка входа.
+    По окончанию работы программы выводит список со списком 
+    пользовательских данных
 
-    :return:
+    :return: None
     """
     # Получеем все паттерны для регулярок
     all_patterns_dict = get_reg_data()
