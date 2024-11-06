@@ -16,7 +16,10 @@ def set_user_data(question: str, reg_pattern_name: str, user_data_list: list, al
         # Выьираем нужный паттерн
         pattern = all_patterns_dict.get(reg_pattern_name)
         # Проверяем введенные данные
-        check = reg_check(user_data, pattern, users_list)
+        if question == 'Введите номер телефона: ' or question == 'Введите электронную почту: ':
+            check = reg_check(user_data, pattern, users_list, 'check')
+        else:
+            check = reg_check(user_data, pattern, users_list)
 
         # Логика
         if check:
@@ -67,8 +70,9 @@ def start_answers():
             )
             print(result)
             
-        users_list.append(user_data_list)
+        users_list.append(result)
         user_data_list = []
+        print(f'users_list is: {users_list}')
 
 
     print(users_list)

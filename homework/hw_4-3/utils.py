@@ -17,7 +17,7 @@ def get_reg_data() -> dict:
     return patterns_list
 
 
-def reg_check(user_data: str, reg_pattern: str, users_list: list) -> str:
+def reg_check(user_data: str, reg_pattern: str, users_list: list, unique = None) -> str:
     """ 
     Возвращает аргумент user_data, если он прошел все 
     проверки
@@ -29,7 +29,10 @@ def reg_check(user_data: str, reg_pattern: str, users_list: list) -> str:
     :return: user_data
     """
     check_reg = bool(re.match(reg_pattern, user_data))
-    check_unique = check_unique_data(user_data, users_list)
+    if unique == 'check':
+        check_unique = check_unique_data(user_data, users_list)
+    else:
+        check_unique = True
 
     if check_reg and check_unique:
         return user_data
@@ -37,7 +40,7 @@ def reg_check(user_data: str, reg_pattern: str, users_list: list) -> str:
     
 
 
-def check_unique_data(user_data: str, users_list: list):
+def check_unique_data(user_data: str, users_list: list) -> bool:
     """ 
     Проверяет уникальность введенного номера телефона 
     и адреса email
@@ -45,5 +48,8 @@ def check_unique_data(user_data: str, users_list: list):
     :param user_data: пользовательские данные для проверки
     :param 
     """
-    if user_data not in users_list:
-        return True
+    for i in users_list:
+        if user_data in i:
+            return False 
+
+    return True
