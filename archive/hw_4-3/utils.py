@@ -37,8 +37,6 @@ def reg_check(user_data: str, reg_pattern: str, users_list: list, unique = None)
     if check_reg and check_unique:
         return user_data
 
-    
-
 
 def check_unique_data(user_data: str, users_list: list) -> bool:
     """ 
@@ -46,7 +44,8 @@ def check_unique_data(user_data: str, users_list: list) -> bool:
     и адреса email
 
     :param user_data: пользовательские данные для проверки
-    :param 
+    :param users_list: список пользователей
+    :return: boolean
     """
     for i in users_list:
         if user_data in i:
