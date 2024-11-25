@@ -56,10 +56,18 @@ def remove_directory(dir_name: str) -> None:
     except Exception as e:
         print(f'Ошибка при удалении папки: {e}')
 
-# Пример использования
-new_dir_name = 'new_folder'
-create_directory(new_dir_name)  # Создание папки
-remove_directory(new_dir_name)    # Удаление папки
+
+def write_text_to_file(filename: str, text: str) -> None:
+    """Записывает указанный текст в файл построчно."""
+    with open(filename, 'w', encoding='utf-8') as file:
+        file.write(text)
+
+
+def read_text_from_file(filename: str) -> None:
+    """Читает текст из файла и выводит его в консоль построчно."""
+    with open(filename, 'r', encoding='utf-8') as file:
+        for line in file:
+            print(line, end='')
 
 
 # Задание 1-1
@@ -82,3 +90,18 @@ print(
 # Задание 1-4
 create_directory('new_dir')
 remove_directory('new_dir')
+
+
+# Задание 2
+# Текст для записи
+text_to_write = """Если б мишки были пчелами,
+То они бы нипочем,
+Никогда и не подумали,
+Так высоко строить дом."""
+
+# Записываем текст в файл test_file_1.txt
+write_text_to_file('data_path_1/test_file_1.txt', text_to_write)
+
+# Читаем текст из файла test_file_1.txt
+print('\n\n')
+read_text_from_file('data_path_1/test_file_1.txt')
