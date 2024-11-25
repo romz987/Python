@@ -1,21 +1,46 @@
-def show_quote():
-    name = 'Steve Jobs'
-
-    print(
-        'Don\'t let the noise of others opinions\n' 
-        'drown out your own inner voice\n'
-        f'{name.rjust(40)}'
-    )
+class Human:
 
 
-def odd_numbers(num_one: int, num_two: int):
-    if num_one > num_two:
-        num_one, num_two = num_two, num_one 
+    def __init__(self):
+        self.full_name = ''
+        self.dob = ''
+        self.phone = ''
+        self.town = ''
+        self.contry = ''
 
-    for i in range(num_one, num_two + 1):
-        if i % 2 != 0:
-            print(i)
+
+    def set_data(self, full_name, dob, phone, town, contry):
+        self.full_name = full_name
+        self.dob = dob
+        self.phone = phone
+        self.town = town
+        self.contry = contry 
 
 
-odd_numbers(20, 10)
+    def get_data_dict(self):
+        _dict = {
+            'full_name': self.full_name,
+            'dob': self.dob,
+            'phone': self.phone,
+            'town': self.town,
+            'contry': self.contry
+        }
 
+        return _dict
+
+
+hm = Human()
+
+full_name = input('Введите Ваше имя: ')
+dob = input('Введите дату рождения: ')
+phone = input('Введите Ваш номер телефона: ')
+town = input('Введите Ваш город: ')
+contry = input('Введите Вашу страну: ')
+
+hm.set_data(full_name, dob, phone, town, contry)
+
+result = hm.get_data_dict()
+print(result)
+
+for key, value in result.items():
+    print(f'{key} - {value}')
