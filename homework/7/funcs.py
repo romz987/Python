@@ -1,4 +1,6 @@
-import json 
+import os 
+import json
+
 
 def get_user_level(level: str, questions: list) -> dict:
     """ 
@@ -11,9 +13,9 @@ def get_user_level(level: str, questions: list) -> dict:
         'hard'    - сложный
     :return: словарь для теста по английскому
     """
-    if user_level == 'easy':
+    if level == 'easy':
         return questions[0]
-    elif user_level == 'medium':
+    elif level == 'medium':
         return questions[1]
     else:
         return questions[2]
@@ -70,27 +72,17 @@ def get_result(results_dictionary: dict, user_answers_dictionary: dict):
     print(f'Ваш уровень: {result}')
 
 
+def save_results(user_answers_dictionary: dict, username: str):
+    """ 
+    Сохраняем результаты в папку results 
 
-if __name__ == "__main__":
-    try:
-        with open('questions.json', 'r', encoding='utf-8') as file:
-            data = json.load(file)
-    except Exception as e:
-        print(f'error: {str(e)}')
+    :param user_answers_dictionary: словарь с результатами
+    :param username: имя пользователя
+    :return: None
+    """
+    file_path= os.path.join('results', f'{username}.json')
 
-    questions = data[0]['questions']
-    results_dictionary = data[1]['levels']
+    with open(file_path, 'w', encoding='utf-8') as file:
+        json.dump(user_answers_dictionary, file, ensure_ascii=False, indent=4)
 
-    while True:
-        user_level = str(
-            input('Введите уровень сложности [easy/medium/hard]: ')
-        ).lower().strip()
-
-        if user_level in ['easy', 'medium', 'hard']:
-            break 
-        else:
-            print(f'{user_level} - недопустимое значение')
-
-    check_dictionary = get_user_level(user_level, questions)
-    user_answers_dictionary = base_program(check_dictionary)
-    get_result(results_dictionary, user_answers_dictionary)
+    print('Результаты сохранены')
