@@ -96,15 +96,18 @@ class DasAuto(AutoEngine):
             print(f'Это странный автомобиль {self.name}')
 
         if self.door_color != '':
-            print(f'С дверями цвета: {self.door_color}')
+            print(f'С дверьми цвета: {self.door_color}')
 
 
 if __name__ == "__main__":
     au = DasAuto('WV')
 
-    au.door_count = 4
-    au.door_color = 'баклажан'
-    au.wheels_count = 7 
-    au.engine_hp = 150 
+    try:
+        au.door_count = 4
+        au.door_color = 'баклажан'
+        au.wheels_count = 7 
+        au.engine_hp = 150
+    except Exception as e:
+        print(f'error: {str(e)}')
 
     au.conclusion()
