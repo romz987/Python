@@ -50,7 +50,7 @@ if __name__ == "__main__":
 
     andg = Anim('собака', 'бабака', 'буф!', 'подвид волка')
     anct = Anim('кот', 'бегемот', 'мяу!', 'подвид лесного кота')
-    anpt = Anim('попугай', 'геша', 'python is a slowest language I saw ever', 'подвид динозавра')
+    anpt = Anim('попугай', 'геша', 'python is a slowest language I ever seen', 'подвид динозавра')
     anhr = Anim('хомяк', 'медведь', '...', 'просто грызун')
 
     andg.show_name()
