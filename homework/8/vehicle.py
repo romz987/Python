@@ -17,7 +17,7 @@ class Vehicle:
             elif wheels_count == 3:
                 return f'У Вашего {self.name} украли колесо!'
             elif wheels_count == 4:
-                return f'Это автомобиль маркм {self.name}'
+                return f'Это автомобиль марки {self.name}'
 
         except Exception as e:
             print(f'Error! {str(e)}')

@@ -1,5 +1,5 @@
 class Refrig:
-    """ Просто холодильник """
+    """ Задание 8.1.2 холодильник """
 
     def __init__(self, model: str, age: int, volume: int):
         self.model = str(model)
@@ -54,6 +54,7 @@ if __name__ == "__main__":
     ref_two = Refrig('lg', 2, 100)
     answer = 1
 
+    # Для работы с объектом ref_two все ref_one надо заменить на ref_two
     while answer != 0:
         print('Введите 1 чтобы увидеть модель холодильника')
         print('Введите 2 чтобы увидеть возраст холодильника')
