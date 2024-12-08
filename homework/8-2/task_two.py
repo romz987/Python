@@ -10,6 +10,14 @@ class DisciplineTeacher(Teacher):
         self.__job_title = job_title
 
 
+    def get_discipline(self):
+        return self.__discipline
+
+
+    def get_job_title(self):
+        return self.__job_title
+
+
     def get_teacher_data(self):
         expirience = self.get_expirience()
         name = self.get_name()
