@@ -17,10 +17,6 @@ class WorldCapitals:
         pass 
 
 
-    def func(self):
-        pass
-
-
     def add_data(self, contry_name: str, capital_name: str) -> str:
         self.world_capitals_dict[contry_name] = capital_name
         return (f"'{contry_name}: {capital_name}' added")
@@ -33,7 +29,7 @@ class WorldCapitals:
             if value == name:
                 return key 
         return "searched data is not exists"
-
+    
 
     def remove_data(self, name: str) -> str:
         for key, value in self.world_capitals_dict.items():
@@ -55,7 +51,7 @@ class WorldCapitals:
 
     def pickle_data(self):
         try:
-            with open("pickled_data.pkl", "wb") as file:
+            with open("pickled_data_contries.pkl", "wb") as file:
                 pickle.dump(self.world_capitals_dict, file)
         except Exception as e:
             print(f"error: {str(e)}")
@@ -65,7 +61,7 @@ class WorldCapitals:
 
     def load_data(self):
         try:
-            with open("pickled_data.pkl", "rb") as file:
+            with open("pickled_data_contries.pkl", "rb") as file:
                 data = pickle.load(file)
                 self.world_capitals_dict = data
         except Exception as e:
