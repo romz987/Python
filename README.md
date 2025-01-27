@@ -1,4 +1,4 @@
-<img src="https://i.postimg.cc/nzbr3kRD/Untitled.png" width="200" height="100">
+<img src="https://i.postimg.cc/nzbr3kRD/Untitled.png" width="1000" height="250">
 
 
 # Учебный репозиторий
