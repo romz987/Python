@@ -194,7 +194,7 @@ if __name__ == "__main__":
 
     # Получаем сборщик пасты из фабрики
     try:
-        pasta = fabrica.get_pasta_maker("pasta_carbonar")
+        pasta = fabrica.get_pasta_maker("pasta_carbonara")
     except Exception as e:
         print(f"error: {str(e)}")
     else:
