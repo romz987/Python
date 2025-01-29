@@ -105,7 +105,7 @@ class Invoker:
 
         :param header: заголовок уведомления которое нужно уведомить
         """
-        for command in sorted(self.__queue):
+        for command in self.__queue:
                 command_header = command.get_header()
                 if header == command_header:
                     self.__queue.remove(command)
