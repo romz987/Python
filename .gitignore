@@ -2,4 +2,5 @@
 .venv/
 __pycache__/
 *.pyc
+self/09_Network/
 
