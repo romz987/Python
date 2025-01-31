@@ -53,8 +53,8 @@ class Book(BookBase):
         """ Вывести данные о книге """
         status = "доступна" if self._available else "на руках"
         answer = (
-            f"Книга {self._title} автора {self._author} {self._year} года.\n"
-            f"Доступность: {status}. Находится: {self._holder}"
+            f'Книга: "{self._title}"\nАвтор: {self._author}. Год публикации: {self._year}.\n'
+            f"Доступность: {status}.\nНаходится: {self._holder}"
         )
         return answer
 

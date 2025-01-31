@@ -35,7 +35,38 @@ if __name__ == "__main__":
                 for book in books:
                     print(book)
                     print()
-                input("Нажмите любую клавишу для продолжения...")
             except Exception as e:
                 print(f"Ошибка: {str(e)}")
+            finally:
+                input("Нажмите любую клавишу для продолжения...")
 
+        elif choice == "2":
+            os.system('clear')
+            try: 
+                pass
+            except Exception as e:
+                print(f"Ошибка: {str(e)}")
+            finally:
+                input("Нажмите любую клавишу для продолжения...")
+
+        elif choice == "3":
+            os.system('clear')
+            try: 
+                pass
+            except Exception as e:
+                print(f"Ошибка: {str(e)}")
+            finally:
+                input("Нажмите любую клавишу для продолжения...")
+
+        elif choice == "4":
+            os.system('clear')
+            try: 
+                pass
+            except Exception as e:
+                print(f"Ошибка: {str(e)}")
+            finally:
+                input("Нажмите любую клавишу для продолжения...")
+
+        elif choice == "0":
+            os.system('clear')
+            exit()
