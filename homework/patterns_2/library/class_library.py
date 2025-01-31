@@ -1,9 +1,11 @@
 from abstracts import LibraryBase
+from class_client import Client
 
 
 class Library(LibraryBase):
 
-    def __init__(self, books: list, class_book: type):
+    def __init__(self, books: list, clients: list, class_book: type):
+        self.clients = clients
         self.books = books
         self.class_book = class_book
 
@@ -63,6 +65,16 @@ class Library(LibraryBase):
         for book in self.books:
             if book.get_title() == book_title:
                 return book.__str__()
+
+    def get_clients(self) -> list:
+        """ Вернуть список клиентов """
+        return self.clients
+
+    def get_client(self, client_name: str) -> Client:
+        """ Вернуть конркетного клиента """
+        for client in self.clients:
+            if client.get_name() == client_name:
+                return client
 
     def give_book(self, book: str):
         """ Отдать книгу библиотекарю """
