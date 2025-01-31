@@ -12,7 +12,8 @@ if __name__ == "__main__":
         print("Менеджер записок")
         print("1. Создать записку")
         print("2. Отменить создание последней записки")
-        print("3. Показать все записки")
+        print("3. Вернуть удаленную записку")
+        print("4. Показать все записки")
         print()
         print("0. Выход")
         print("\n")
@@ -49,8 +50,23 @@ if __name__ == "__main__":
             finally:
                 input("Нажмите любую клавишу для продолжения...")
 
-        # Показать все записки
+
+        # Отменить удаление записки
         elif choice == "3":
+            os.system('clear')
+            try: 
+                command.execute()
+                print("Удаленная записка возвращена!")
+
+            except NameError:
+                print("Записки еще не добавлялись!")
+            except Exception as e:
+                print(f"Ошибка: {str(e)}")
+            finally:
+                input("Нажмите любую клавишу для продолжения...")
+
+        # Показать все записки
+        elif choice == "4":
             os.system('clear')
             try: 
                 notes_list = nmanager.get_notes_list()
