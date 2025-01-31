@@ -11,7 +11,7 @@ books_list = [
     ["Цветы для Элджернона", "Дэниел Киз", "1959"],
     ["Вино из одуванчиков", "Рей Бредберри", "1957"],
     ["Алиса в стране чудес", "Льюис Кэролл", "1865"],
-    ["Ильф и Петров", "Бронированное место", "1932"]
+    ["Бронированное место", "Бронированное место", "1932"]
 ]
 
 
@@ -89,23 +89,26 @@ class Library():
             books.append(i.__str__())
         return books
 
-    def add_new_book(self):
+    def add_new_book(self, title: str, author: str, year: str):
         """ Добавить новую книгу """
-        title = str(input("Введите название книги: "))
-        author = str(input("Введите имя автора книги: "))
-        year = str(input("Введите год издания: "))
         book = Book(title, author, year)
         self.books.append(book)
 
-    def change_book_title(self, current_book_title: str, new_book_title: str):
+    def change_book_title(self, current_book_title: str, new_book_title: str) -> bool:
         """ Изменить текущую книгу """
         for book in self.books:
             if book.get_title() == current_book_title:
                 book.set_title(new_book_title)
+                return True
+        return False
 
-    def remove_book(self, book_title: str):
+    def remove_book(self, book_title: str) -> bool:
         """ Удалить книгу из коллекции """
-        pass
+        for book in self.books:
+            if book.get_title() == book_title:
+                self.books.remove(book)
+                return True
+        return False
 
     def search_book(self, book_title: str) -> bool:
         """ Найти книгу в коллекции """
@@ -151,21 +154,28 @@ if __name__ == "__main__":
             os.system('clear')
             old_book_title = str(input("Введите текущее название книги: "))
             new_book_title = str(input("Введите новое название книги: "))
-            exist = library.search_book(old_book_title)
-            if exist:
-                library.change_book_title(old_book_title, new_book_title)
+
+            if library.change_book_title(old_book_title, new_book_title):
                 print(
                     f"Название книги {old_book_title} изменено на {new_book_title}"
                 )
+            else:
+                print(f"Книга {old_book_title} не найдена")
             input("Нажмите любую клавишу для продолжения...")
 
         elif choice == "3":
             os.system('clear')
-            library.add_new_book()
+            title = str(input("Введите название книги: "))
+            author = str(input("Введите имя автора книги: "))
+            year = str(input("Введите год издания: "))
+            library.add_new_book(title, author, year)
             input("Нажмите любую клавишу для продолжения...")
 
         elif choice == "4":
             os.system('clear')
+            book_title = str(input("Введите название книги: "))
+            library.remove_book(book_title)
+            print(f"Книга {book_title} удалена из библиотеки")
             input("Нажмите любую клавишу для продолжения...")
 
         elif choice == "0":
