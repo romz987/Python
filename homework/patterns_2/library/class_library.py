@@ -3,8 +3,9 @@ from abstracts import LibraryBase
 
 class Library(LibraryBase):
 
-    def __init__(self, books: list):
+    def __init__(self, books: list, class_book: type):
         self.books = books
+        self.class_book = class_book
 
     def get_all_books(self) -> list:
         """ Вернуть описание всех книг """
@@ -22,7 +23,7 @@ class Library(LibraryBase):
         :param year: Год публикации
         :return: None
         """
-        book = Book(title, author, year)
+        book = self.class_book(title, author, year)
         self.books.append(book)
 
     def change_book_title(self, current_book_title: str, new_book_title: str) -> bool:
@@ -34,8 +35,8 @@ class Library(LibraryBase):
         :return: Bool
         """
         for book in self.books:
-            if book.get_title() == current_book_title:
-                book.set_title(new_book_title)
+            if book.title == current_book_title:
+                book.title = new_book_title
                 return True
         return False
 
@@ -47,7 +48,7 @@ class Library(LibraryBase):
         :return: Bool
         """
         for book in self.books:
-            if book.get_title() == book_title:
+            if book.title == book_title:
                 self.books.remove(book)
                 return True
         return False

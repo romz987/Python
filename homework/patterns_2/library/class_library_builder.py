@@ -7,9 +7,9 @@ class LibraryBuilder(LibraryBuilderBase):
     """ Строитель библиотеки """
 
 
-    def __init__(self, library_class: type, book_class: type):
-        self.library_class = library_class
-        self.book_class = book_class
+    def __init__(self, class_library: type, class_book: type):
+        self.class_library = class_library
+        self.class_book = class_book
 
 
     def build_library(self, books_list: list) -> Library:
@@ -21,7 +21,7 @@ class LibraryBuilder(LibraryBuilderBase):
         """
         books = []
         for i in books_list:
-            book = self.book_class(i[0], i[1], i[2])
+            book = self.class_book(i[0], i[1], i[2])
             books.append(book)
-        return self.library_class(books)
+        return self.class_library(books, self.class_book)
 

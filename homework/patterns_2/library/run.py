@@ -40,28 +40,40 @@ if __name__ == "__main__":
             finally:
                 input("Нажмите любую клавишу для продолжения...")
 
+        # Поменять название книги
         elif choice == "2":
             os.system('clear')
             try: 
-                pass
+                current_book_title = str(input("Введите текущее название книги: "))
+                new_book_title = str(input("Введите новое название книги: "))
+                if library.change_book_title(current_book_title, new_book_title):
+                    print("Название книги успешно изменено!")
             except Exception as e:
                 print(f"Ошибка: {str(e)}")
             finally:
                 input("Нажмите любую клавишу для продолжения...")
 
+        # Добавить книгу
         elif choice == "3":
             os.system('clear')
             try: 
-                pass
+                title = str(input("Введите название книги: "))
+                author = str(input("Введите имя автора книги: "))
+                year = str(input("Введите год издания: "))
+                library.add_new_book(title, author, year)
+                print("Книга успешно добавлена!")
             except Exception as e:
                 print(f"Ошибка: {str(e)}")
             finally:
                 input("Нажмите любую клавишу для продолжения...")
 
+        # Удалить книгу
         elif choice == "4":
             os.system('clear')
             try: 
-                pass
+                book_title = str(input("Введите название книги: "))
+                library.remove_book(book_title)
+                print("Книга успешно удалена!")
             except Exception as e:
                 print(f"Ошибка: {str(e)}")
             finally:
