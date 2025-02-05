@@ -1,0 +1,40 @@
+
+2025-02-05 18:50:52,032 - logger - INFO - configmanager: config file loaded
+2025-02-05 18:50:52,032 - logger - INFO - configmanager: request books from config
+2025-02-05 18:50:52,032 - logger - INFO - configmanager: request clients from config
+2025-02-05 18:50:52,032 - logger - INFO - librarybuilder: library builded!
+2025-02-05 18:50:53,025 - logger - INFO - get books request
+2025-02-05 18:50:54,950 - logger - INFO - get clients request
+2025-02-05 18:51:04,022 - logger - INFO - get books request
+2025-02-05 18:51:12,567 - logger - INFO - take book named: Алиса в стране чудес request from: Иван Петров
+2025-02-05 18:51:12,567 - logger - INFO - book taken
+2025-02-05 18:51:17,344 - logger - INFO - exiting...
+2025-02-05 18:51:56,772 - logger - INFO - configmanager: config file loaded
+2025-02-05 18:51:56,772 - logger - INFO - configmanager: request books from config
+2025-02-05 18:51:56,773 - logger - INFO - configmanager: request clients from config
+2025-02-05 18:51:56,773 - logger - INFO - librarybuilder: library builded!
+2025-02-05 18:51:57,712 - logger - INFO - get books request
+2025-02-05 18:51:58,917 - logger - INFO - get clients request
+2025-02-05 18:52:00,462 - logger - INFO - get clients request
+2025-02-05 18:52:05,715 - logger - INFO - get books request
+2025-02-05 18:52:10,250 - logger - INFO - take book named: Бронированное место request from: Иван Петров
+2025-02-05 18:52:10,250 - logger - INFO - book taken
+2025-02-05 18:52:18,371 - logger - INFO - search books request. book name: Три товарище
+2025-02-05 18:52:18,371 - logger - INFO - book not found
+2025-02-05 18:52:26,499 - logger - INFO - search books request. book name: Три товарища
+2025-02-05 18:52:26,499 - logger - INFO - book found
+2025-02-05 18:52:46,218 - logger - INFO - change book name request from Три товарища to Четыре товарища
+2025-02-05 18:52:46,218 - logger - INFO - search books request. book name: Три товарища
+2025-02-05 18:52:46,218 - logger - INFO - book found
+2025-02-05 18:52:46,218 - logger - INFO - book name changed
+2025-02-05 18:52:50,114 - logger - INFO - saving libabry state to pkl file...
+2025-02-05 18:52:54,745 - logger - INFO - exiting...
+2025-02-05 18:58:12,815 - logger - INFO - configmanager: config file loaded
+2025-02-05 18:58:12,815 - logger - INFO - configmanager: request books from config
+2025-02-05 18:58:12,815 - logger - INFO - configmanager: request clients from config
+2025-02-05 18:58:12,815 - logger - INFO - librarybuilder: library builded!
+2025-02-05 18:58:23,593 - logger - INFO - get clients request
+2025-02-05 18:58:32,638 - logger - INFO - get books request
+2025-02-05 18:58:34,178 - logger - INFO - take book named: q request from: w
+2025-02-05 18:58:34,178 - logger - ERROR - run.py menu choise 3 error: cannot access local variable 'client' where it is not associated with a value
+2025-02-05 18:58:36,736 - logger - INFO - exiting...
