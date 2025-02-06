@@ -38,3 +38,15 @@
 2025-02-05 18:58:34,178 - logger - INFO - take book named: q request from: w
 2025-02-05 18:58:34,178 - logger - ERROR - run.py menu choise 3 error: cannot access local variable 'client' where it is not associated with a value
 2025-02-05 18:58:36,736 - logger - INFO - exiting...
+2025-02-05 19:02:16,476 - logger - INFO - configmanager: config file loaded
+2025-02-05 19:02:16,476 - logger - INFO - configmanager: request books from config
+2025-02-05 19:02:16,476 - logger - INFO - configmanager: request clients from config
+2025-02-05 19:02:16,476 - logger - INFO - librarybuilder: library builded!
+2025-02-05 19:02:21,123 - logger - INFO - get books request
+2025-02-05 19:02:23,616 - logger - INFO - get clients request
+2025-02-05 19:02:26,207 - logger - INFO - get clients request
+2025-02-05 19:02:32,747 - logger - INFO - get books request
+2025-02-05 19:02:35,197 - logger - INFO - take book named: Три товарища request from: Иван Петров
+2025-02-05 19:02:35,198 - logger - INFO - book taken
+2025-02-05 19:02:43,049 - logger - INFO - show client books request
+2025-02-05 19:02:45,875 - logger - INFO - exiting...
