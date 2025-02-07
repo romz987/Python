@@ -11,8 +11,6 @@ class ShoesView:
         """ Показать весь ассортимент """
         data = self._controller.get_assortment_all()
         # Выводим женский ассортимент
-        print("Ассортимент женской обуви: ")
-        print()
         woman_assortment = data["woman"]
         for model, value in woman_assortment.items():
             for size, showes_data in value.items():
@@ -23,8 +21,6 @@ class ShoesView:
                     print(f"Цена: {price} руб.")
                     print()
 
-        print("Ассортимент мужской обуви: ")
-        print()
         man_assortment = data["man"]
         for model, value in man_assortment.items():
             for size, showes_data in value.items():
@@ -39,8 +35,6 @@ class ShoesView:
         """ Показать ассортимент женской обуви """
         data = self._controller.get_assortment_all()
         # Выводим женский ассортимент
-        print("Ассортимент женской обуви: ")
-        print()
         woman_assortment = data["woman"]
         for model, value in woman_assortment.items():
             for size, showes_data in value.items():
@@ -54,8 +48,6 @@ class ShoesView:
     def show_man_assortment(self) -> None:
         """ Показать ассортимент мужской обуви """
         data = self._controller.get_assortment_all()
-        print("Ассортимент мужской обуви: ")
-        print()
         man_assortment = data["man"]
         for model, value in man_assortment.items():
             for size, showes_data in value.items():
@@ -69,8 +61,6 @@ class ShoesView:
     def show_woman_assortment_by_size(self, size: int) -> None:
         """ Показать женский ассортмент по раземру """
         data = self._controller.get_assortment_woman_by_size(size)
-        print(f"Женская обувь, размер {size}:")
-        print()
         for i in data:
             for model, showes_data in i.items():
                 for color, price in showes_data.items():
@@ -82,8 +72,6 @@ class ShoesView:
     def show_man_assortment_by_size(self, size: int) -> None:
         """ Показать мужской ассортмент по раземру """
         data = self._controller.get_assortment_man_by_size(size)
-        print(f"Мужская обувь, размер {size}:")
-        print()
         for i in data:
             for model, showes_data in i.items():
                 for color, price in showes_data.items():
@@ -92,12 +80,22 @@ class ShoesView:
                     print(f"Цена: {price}")
                     print()
 
-    def show_woman_assortment_by_size(self, color: str) -> None:
+    def show_woman_assortment_by_color(self, color: str) -> None:
         """ Показать женский ассортмент по раземру """
         data = self._controller.get_assortment_woman_by_color(color)
-        print(data)
+        for i in data:
+            print(f"Марка: {i["model"]}")
+            print(f"Размер: {i["size"]}")
+            print(f"Цвет: {i["color"]}")
+            print(f"Цена: {i["price"]}")
+            print()
 
-    def show_man_assortment_by_size(self, color: str) -> None:
+    def show_man_assortment_by_color(self, color: str) -> None:
         """ Показать мужской ассортмент по раземру """
         data = self._controller.get_assortment_man_by_color(color)
-        print(data)
+        for i in data.items():
+            print(f"Марка: {i["model"]}")
+            print(f"Размер: {i["size"]}")
+            print(f"Цвет: {i["color"]}")
+            print(f"Цена: {i["price"]}")
+            print()
