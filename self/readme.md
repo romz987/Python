@@ -5,13 +5,16 @@
 
     [00_Python]
     [01_Python_in_linux]
-    [02_Algorithms]
-    [03_Data_Structures]
+    [02_Algorithms](#Algorithms)
+    [03_Data_Structures](#Data_Structures)
     [04_OOP]
-    [05_Patterns]
+    [05_Patterns](#Patterns)
     [06_Protocols]
-    [07_Math]
-   
+    [07_Principles]
+    [08_Math]
+    [09_Network] [hidden]
+    [10_Licenses]
+  
 ----
 
 ## Algorithms
@@ -24,6 +27,7 @@
 7. Квадратные уравнения
 8. Сортировка пузырьком
 
+----
 
 ## Data_Structures
 1. Стек (LIFO)
@@ -36,6 +40,7 @@
 8. Кучи
 9. Многозначные словари
 
+----
 
 ## Patterns 
-[Краткое описание частоиспользуемых паттернов](#https://habr.com/ru/articles/785476/)
+[Краткое описание частоиспользуемых паттернов](https://habr.com/ru/articles/785476/)
