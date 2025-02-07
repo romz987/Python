@@ -10,9 +10,6 @@ class ShoesModel:
         except Exception:
             raise
 
-    def method(self):
-        pass
-
     def _load_file(self, file_path: str):
         """ Загрузка файла """
         with open(file_path, "r", encoding="UTF-8") as file:

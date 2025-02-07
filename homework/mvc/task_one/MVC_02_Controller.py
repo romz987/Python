@@ -7,7 +7,6 @@ class ShoesController:
     def __init__(self, model: ShoesModel):
         self._model = model
 
-
     def get_assortment_all(self) -> dict:
         """ Получить весь ассортимент обуви """
         data = self._model.get_assortment()
