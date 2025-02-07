@@ -3,17 +3,17 @@
 
 ## Содержимое
 
-    [00_Python]
-    [01_Python_in_linux]
-    [02_Algorithms](#Algorithms)
-    [03_Data_Structures](#Data_Structures)
-    [04_OOP]
-    [05_Patterns](#Patterns)
-    [06_Protocols]
-    [07_Principles]
-    [08_Math]
-    [09_Network] [hidden]
-    [10_Licenses]
+[00_Python]
+[01_Python_in_linux]
+[02_Algorithms](#Algorithms)
+[03_Data_Structures](#Data_Structures)
+[04_OOP]
+[05_Patterns](#Patterns)
+[06_Protocols]
+[07_Principles]
+[08_Math]
+[09_Network] [hidden]
+[10_Licenses]
   
 ----
 
