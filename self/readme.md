@@ -3,8 +3,8 @@
 
 ## Содержимое
 
-[00_Python]()  
-[01_Python_in_linux]()    
+[00_Python](#Python)  
+[01_Python_in_linux](#Python-in-linux)    
 [02_Algorithms](#Algorithms)  
 [03_Data_Structures](#Data_Structures)    
 [04_OOP]()  
@@ -13,7 +13,18 @@
 [07_Principles]()  
 [08_Math]()  
 [09_Network #hidden]()    
-[10_Licenses]()  
+[10_Licenses]()
+
+----
+
+## Python 
+1. Общие сведения
+2. Полезные ссылки
+
+----
+
+## Python in linux
+1. Python может заменить bash!
   
 ----
 
