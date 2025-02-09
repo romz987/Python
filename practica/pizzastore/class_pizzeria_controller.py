@@ -46,11 +46,11 @@ class PizzeriaController:
             self.save_order_to_file(order)
             return order
 
-    def save_order_to_file(self, order: Order):
+    def save_order_to_file(self, order: Order) -> None:
         """ Сохранить заказ в файл """
         self._model.save_order(order)   
 
-    def get_orders_summary(self):
+    def get_orders_summary(self) -> dict:
         """ Отчет по заказам """
         if len(self._orders) > 0:
             total_profit = 0

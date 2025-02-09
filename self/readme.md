@@ -31,8 +31,9 @@
 ----
 
 ## Algorithms
+0. Reverse number algorithm
 1. Reverse string algorithm
-2. Решето Эрастофена
+2. Решето Эратосфена
 3. НОД
 4. НОК
 5. Факториал

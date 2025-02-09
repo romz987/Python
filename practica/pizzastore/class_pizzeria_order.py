@@ -10,7 +10,7 @@ class Order:
         self._toppings = toppings 
         self._total_price = price
 
-    def get_total_price(self):
+    def get_total_price(self) -> int:
         """ Возвращает стоимость заказа """
         return self._total_price
 
