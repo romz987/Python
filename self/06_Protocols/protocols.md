@@ -2,11 +2,12 @@
 
 ## Контент: 
 
+[Стандартизация: ISO & etc]
 [URL & URI]()  
 [HTTP]()  
-[OSI]()
+[OSI & TCP/IP]()
 [UDP, TCP, QUIK]()
-[Server Response]()  
+[Server Response Codes]()  
 [SSL, TLS]()  
 
 ----

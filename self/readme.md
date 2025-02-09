@@ -10,10 +10,12 @@
 [04_OOP]()  
 [05_Patterns](#Patterns)  
 [06_Protocols]()    
-[07_Principles]()  
-[08_Math]()  
-[09_Network #hidden]()    
-[10_Licenses]()
+[07_Principles]()
+[08_Other](#Other)
+[09_Math]()  
+[10_Network #hidden]()    
+[11_Licenses]()
+[12_Server_Carry]()
 
 ----
 
@@ -55,3 +57,12 @@
 
 ## Patterns 
 [Краткое описание часто используемых паттернов](https://habr.com/ru/articles/785476/)
+
+---- 
+
+## Other  
+
+1. Замыкания
+2. Декораторы
+3. Списковые выржания
+4. Лямбды (псевдонимы&)
