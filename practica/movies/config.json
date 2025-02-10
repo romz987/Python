@@ -5,7 +5,12 @@
     "year": "2010",
     "duration": "148 minutes",
     "studio": "Warner Bros.",
-    "actors": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page", "Tom Hardy"]
+    "actors": [
+      "Leonardo DiCaprio",
+      "Joseph Gordon-Levitt",
+      "Elliot Page",
+      "Tom Hardy"
+    ]
   },
   "the shawshank redemption": {
     "genre": "Drama",
@@ -13,7 +18,12 @@
     "year": "1994",
     "duration": "142 minutes",
     "studio": "Columbia Pictures",
-    "actors": ["Tim Robbins", "Morgan Freeman", "Bob Gunton", "William Sadler"]
+    "actors": [
+      "Tim Robbins",
+      "Morgan Freeman",
+      "Bob Gunton",
+      "William Sadler"
+    ]
   },
   "the godfather": {
     "genre": "Crime",
@@ -21,6 +31,11 @@
     "year": "1972",
     "duration": "175 minutes",
     "studio": "Paramount Pictures",
-    "actors": ["Marlon Brando", "Al Pacino", "James Caan", "Diane Keaton"]
+    "actors": [
+      "Marlon Brando",
+      "Al Pacino",
+      "James Caan",
+      "Diane Keaton"
+    ]
   }
 }

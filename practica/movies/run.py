@@ -93,8 +93,8 @@ if __name__ == "__main__":
                 try:                 
                     print("УДАЛИТЬ ФИЛЬМ")
                     print()
-                    title = str(input("Введите название фильма для удаления: ")).lower()
-                    result = model.remove_article_by_title(title)
+                    name = str(input("Введите название фильма для удаления: ")).lower()
+                    result = model.remove_movie(name)
                     if result:
                         os.system('clear')
                         print("Фильм успешно удален!")
