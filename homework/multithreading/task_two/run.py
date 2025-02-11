@@ -10,7 +10,11 @@ if __name__ == "__main__":
     thread1.join()
 
     # Второй и третий потоки
-    thread2 = threading.Thread()
-    thread3 = threading.Thread()
+    thread2 = threading.Thread(target=check_file_for_primes, args=(file_path, ))
+    thread3 = threading.Thread(target=calc_factorial_in_file, args=(file_path, ))
+    thread2.start()
+    thread3.start()
+    thread2.join()
+    thread3.join()
 
-    read_file(file_path)
+
