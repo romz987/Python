@@ -32,6 +32,7 @@ def read_file(file_path: str) -> list:
 
 # Проверка на простоту
 def check_file_for_primes(file_path: str):
+    """ Точка входа """
     file_list = read_file(file_path)
     result = is_prime(file_list)
     save_file("primes.txt", result)
@@ -51,6 +52,7 @@ def is_prime(_list: list) -> list:
 
 # Факториал
 def calc_factorial_in_file(file_path: str):
+    """ Точка входа """
     file_list = read_file(file_path)
     result = calculate_factorial(file_list)
     save_file("factorials.txt", result)
