@@ -6,7 +6,7 @@ from class_orders_manager import OrdersManager
 from class_pizza import Pizza
 from utils import *
 
-# Собираем пиццерию Пиццерию
+# Собираем пиццерию
 config_path = "config.json"
 orders_file_path = "orders.txt"
 pizzeria = PizzeriaBuilder.build_pizzeria(
