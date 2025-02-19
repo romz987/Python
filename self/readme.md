@@ -4,25 +4,26 @@
 ## Содержимое
 
 [00_Python](#Python)  
-[01_Python_in_linux](#Python-in-linux)    
+[01_Python_in_linux](#Python-in-linux)      
 [02_Algorithms](#Algorithms)  
 [03_Data_Structures](#Data_Structures)    
 [04_OOP]()  
 [05_Patterns](#Patterns)  
 [06_Protocols]()    
-[07_Principles]()
-[08_Other](#Other)
+[07_Principles]()  
+[08_Other](#Other)  
 [09_Math]()  
-[10_Network #hidden]()    
-[11_Licenses]()
-[12_Server_Carry]()
+[10_Network #hidden]()      
+[11_Licenses]()  
+[12_Server_Carry]()  
 
 ----
 
 ## Python 
 1. Общие сведения
-2. Полезные ссылки
-3. Темы ищут место
+2. Типы данных
+3. Полезные ссылки
+4. Темы ищут место
 
 ----
 

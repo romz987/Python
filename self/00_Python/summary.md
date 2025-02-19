@@ -2,8 +2,9 @@
 
 ## Контент
 
-[Общие сведения](#Общие-сведения)  
-[Полезные ссылки](#Полезные-ссылки)
+[Общие сведения](#Общие-сведения)    
+[Типы данных](#Типы-данных)  
+[Полезные ссылки](#Полезные-ссылки)  
 [Темы ищут место](#Темы-ищут-место)
 
 ----
@@ -12,6 +13,13 @@
 Что значит pythonic?
 
 ----
+
+## Типы данных
+Часть иерархии типов 
+<img src="https://i.ibb.co/CL8PXvh/image.png" width="800" height="600">  
+
+
+Дополнительные типы  
 
 ## Полезные ссылки
 [Про Python от Selectel](https://selectel.ru/blog/courses/course-python/?utm_source=habr.com&utm_medium=referral&utm_campaign=academy_news_pythoncourse_310125_academy)
