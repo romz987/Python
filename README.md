@@ -3,6 +3,5 @@
 
 # Учебный репозиторий
 
-[Установка MS SQL Server на Linux](https://habr.com/ru/articles/819839/)
 
 
