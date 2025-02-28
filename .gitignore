@@ -3,6 +3,6 @@
 __pycache__/
 *.pyc
 self/09_Network/
-homework/mssql
+homework/mssql/
 
 
