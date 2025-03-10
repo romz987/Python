@@ -1,7 +1,7 @@
 # База знаний
 
 
-## Содержимое
+## Контент
 
 [00_Python](#Python)  
 [01_Python_in_linux](#Python-in-linux)      
@@ -16,25 +16,26 @@
 [10_Network #hidden]()      
 [11_Licenses]()  
 [12_Server_Carry]()  
+[14_SQL]()
+
 
 ----
-
 ## Python 
 1. Общие сведения
 2. Типы данных
 3. Полезные ссылки
 4. Темы ищут место
 
-----
 
+----
 ## Python in linux
 1. Python может заменить bash!
   
-----
 
+----
 ## Algorithms
-0. Reverse number algorithm
-1. Reverse string algorithm
+0. Reverse number algorithms
+1. Reverse string algorithms
 2. Решето Эратосфена
 3. НОД
 4. НОК
@@ -43,8 +44,8 @@
 7. Квадратные уравнения
 8. Сортировка пузырьком
 
-----
 
+----
 ## Data_Structures
 1. Стек (LIFO)
 2. Очередь (FIFO)
@@ -56,13 +57,13 @@
 8. Кучи
 9. Многозначные словари
 
-----
 
+----
 ## Patterns 
 [Краткое описание часто используемых паттернов](https://habr.com/ru/articles/785476/)
 
----- 
 
+---- 
 ## Other  
 
 1. Замыкания
