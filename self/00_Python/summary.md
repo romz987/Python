@@ -1,14 +1,29 @@
 # Python
 
-## Контент
+## Содержание
 
-[Общие сведения](#Общие-сведения)    
+**Здесь**
+[Полезные ссылки](#Полезные-ссылки)    
+[Общие сведения](#Общие-сведения)  
 [Типы данных](#Типы-данных)  
-[Полезные ссылки](#Полезные-ссылки)  
 [Темы ищут место](#Темы-ищут-место)
 
-----
+**Отдельно**
+00_history.md - краткий экскурс в историю Python
 
+
+
+----
+## Полезные ссылки
+
+[roadmap Python](https://roadmap.sh/python)
+[неофициальный перевод официального руководства]()
+
+[про Python от Selectel](https://selectel.ru/blog/courses/course-python/?utm_source=habr.com&utm_medium=referral&utm_campaign=academy_news_pythoncourse_310125_academy)
+
+
+
+----
 ## Общие сведения  
 **ЧТО ЗНАЧИТ PYTHONIC?**  
 На официальном сайте python.org не раскрывается это понятие.
@@ -54,8 +69,9 @@ PYTHONIC это:
 2. [PEP 8 – Стиль написания кода на Python](https://peps.python.org/pep-0008/)  
 3. [PEP 257 – Документирование кода](https://peps.python.org/pep-0257/)
 
-----
 
+
+----
 ## Типы данных
 Часть иерархии типов 
 <img src="https://i.ibb.co/CL8PXvh/image.png" width="800" height="600">  
@@ -63,8 +79,7 @@ PYTHONIC это:
 
 Дополнительные типы  
 
-## Полезные ссылки
-[Про Python от Selectel](https://selectel.ru/blog/courses/course-python/?utm_source=habr.com&utm_medium=referral&utm_campaign=academy_news_pythoncourse_310125_academy)
+
 
 ----
 
