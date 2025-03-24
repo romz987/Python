@@ -25,7 +25,7 @@ def create_database(db_name):
 
 def create_test_table():
     """ Создаем таблицу с указанными атрибутами """
-    with mssql_connection("HelloPython") as conn:
+    with mssql_connection("HelloPython2") as conn:
         cursor = conn.cursor()
         try:
             # Устанавливаем уровень изоляции на AUTOCOMMIT
@@ -51,7 +51,7 @@ def insert_data_from_csv(file_path):
     # Читаем данные из CSV файла
     data = pd.read_csv(file_path)
 
-    with mssql_connection("HelloPython") as conn:
+    with mssql_connection("HelloPython2") as conn:
         cursor = conn.cursor()
         try:
             # Устанавливаем уровень изоляции на AUTOCOMMIT
@@ -70,7 +70,7 @@ def insert_data_from_csv(file_path):
 
 def fetch_people():
     """ Запрашивает данные из таблицы People и возвращает их в виде списка словарей """
-    with mssql_connection("HelloPython") as conn:
+    with mssql_connection("HelloPython2") as conn:
         cursor = conn.cursor()
         try:
             cursor.execute("SELECT * FROM People")
@@ -88,8 +88,8 @@ def fetch_people():
 
 # Пробуем
 if __name__ == "__main__":
-    test_connection()
-    # create_database("HelloPython")
+    # test_connection()
+    # create_database("HelloPython2")
     # create_test_table()
     # insert_data_from_csv("people.csv")
     data = fetch_people()
