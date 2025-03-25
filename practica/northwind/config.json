@@ -1,0 +1,28 @@
+{
+  "users": {
+    "columns": {
+      "customer_id": "NVARCHAR(10) PRIMARY KEY",
+      "company_name": "NVARCHAR(100) NOT NULL",
+      "contact_name": "NVARCHAR(50) NOT NULL"
+    }
+  },
+  "employees_data": {
+    "columns": {
+      "employee_id": "INT IDENTITY(1, 1) PRIMARY KEY",
+      "first_name": "NVARCHAR(100) NOT NULL",
+      "last_name": "NVARCHAR(100) NOT NULL",
+      "title": "NVARCHAR(100) NOT NULL",
+      "birth_data": "DATE NOT NULL",
+      "notes": "NVARCHAR(1000) NOT NULL"
+    }
+  },
+  "orders_date": {
+    "columns": {
+      "order_id": "INT IDENTITY(1, 1) PRIMARY KEY",      
+      "customer_id": "",      
+      "employee_id": "",      
+      "order_date": "DATE NOT NULL",     
+      "ship_city": "NVARCHAR(100) NOT NULL"
+    }
+  }
+}
