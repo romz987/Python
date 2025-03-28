@@ -1,6 +1,6 @@
 from context_manager import mssql_connection
 from class_manager_csv import CsvManager
-
+from queries import *
 
 class Repository:
 
@@ -41,44 +41,31 @@ class Repository:
             # Устанавливаем уровень изоляции на AUTOCOMMIT
             conn.autocommit = True
             cursor.execute(sql_query)
- 
 
-    def fill_customers_table(self, db_name: str):
+
+    def fill_customers_table(self, db_name: str, query: str):
         """ Заполнить таблицу customers_data """
         data = self._csvman.get_customers_data()
-        
-        with mssql_connection(db_name) as conn:
-            cursor = conn.cursor()
-            # Устанавливаем уровень изоляции на AUTOCOMMIT
-            conn.autocommit = True
-            
-            for row in data:
-                insert_query = "INSERT INTO users (customer_id, company_name, contact_name) VALUES (?, ?, ?)"
-                cursor.execute(insert_query, row)
+        self._fill_table(data, db_name, query)
 
-    def fill_employees_table(self, db_name: str):
+
+    def fill_employees_table(self, db_name: str, query: str):
         """ Заполнить таблицу employees_data """
         data = self._csvman.get_employees_data()
-        
-        with mssql_connection(db_name) as conn:
-            cursor = conn.cursor()
-            # Устанавливаем уровень изоляции на AUTOCOMMIT
-            conn.autocommit = True
-            
-            for row in data:
-                insert_query = "INSERT INTO employees_data (first_name, last_name, title, birth_data, notes) VALUES (?, ?, ?, ?, ?)"
-                cursor.execute(insert_query, row[1:])  # Пропускаем employee_id, так как он автоинкрементный
+        self._fill_table(data, db_name, query)
 
-    def fill_orders_table(self, db_name: str):
+
+    def fill_orders_table(self, db_name: str, query: str):
         """ Заполнить таблицу orders_data """
         data = self._csvman.get_orders_data()
-        
+        self._fill_table(data, db_name, query)
+
+
+    def _fill_table(self, data: list, db_name: str, query: str):
+        """ Запрос на заполнение к БД """
         with mssql_connection(db_name) as conn:
             cursor = conn.cursor()
             # Устанавливаем уровень изоляции на AUTOCOMMIT
-            conn.autocommit = True
-            
+            conn.autocommit = True        
             for row in data:
-                insert_query = "INSERT INTO orders_data (customer_id, employee_id, order_date, ship_city) VALUES (?, ?, ?, ?)"
-                cursor.execute(insert_query, row[1:])  # Пропускаем order_id, так как он автоинкрементный
-
+                cursor.execute(query, row)

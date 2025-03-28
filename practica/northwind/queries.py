@@ -19,7 +19,7 @@ CREATE TABLE employees_data (
 
 query_create_table_orders_data = """
 CREATE TABLE orders_data (
-    order_id INT IDENTITY(1, 1) PRIMARY KEY, 
+    order_id INT PRIMARY KEY, 
     customer_id NVARCHAR(10) NOT NULL, 
     employee_id INT NOT NULL, 
     order_date DATE NOT NULL, 
@@ -29,3 +29,31 @@ CREATE TABLE orders_data (
 );
 """
 
+
+insert_query_customers_table = """
+INSERT INTO users (
+    customer_id, 
+    company_name, 
+    contact_name
+) VALUES (?, ?, ?);
+"""
+
+insert_query_employees_table = """
+INSERT INTO employees_data (
+    first_name, 
+    last_name, 
+    title, 
+    birth_data, 
+    notes
+) VALUES (?, ?, ?, ?, ?);
+"""
+
+insert_query_orders_table= """
+INSERT INTO orders_data (
+    order_id,
+    customer_id, 
+    employee_id, 
+    order_date, 
+    ship_city
+) VALUES (?, ?, ?, ?, ?);
+"""

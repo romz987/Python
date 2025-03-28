@@ -80,7 +80,7 @@ if __name__ == "__main__":
 
             case "5":
                 try:
-                    repo.fill_customers_table("NorthWind")
+                    repo.fill_customers_table("NorthWind", insert_query_customers_table)
                 except Exception as e:
                     print(f"error: {str(e)}")
                 else:
@@ -90,7 +90,7 @@ if __name__ == "__main__":
 
             case "6":
                 try:
-                    repo.fill_employees_table("NorthWind")
+                    repo.fill_employees_table("NorthWind", insert_query_employees_table)
                 except Exception as e:
                     print(f"error: {str(e)}")
                 else:
@@ -100,7 +100,7 @@ if __name__ == "__main__":
 
             case "7":
                 try:
-                    repo.fill_orders_table("NorthWind")
+                    repo.fill_orders_table("NorthWind", insert_query_orders_table)
                 except Exception as e:
                     print(f"error: {str(e)}")
                 else:
