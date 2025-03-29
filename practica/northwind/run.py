@@ -17,7 +17,7 @@ if __name__ == "__main__":
         print()         
         print("2. Создать таблицу users")        
         print("3. Создать таблицу employees_data")        
-        print("4. Создать таблицу orders_date")       
+        print("4. Создать таблицу orders_data")       
         print()         
         print("5. Заполнить таблицу users из CSV")        
         print("6. Заполнить таблицу employees_data из CSV")        

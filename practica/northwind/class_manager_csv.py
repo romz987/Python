@@ -28,6 +28,4 @@ class CsvManager:
 
 
 
-csvman = CsvManager()
-print(csvman.get_employees_data())
 
