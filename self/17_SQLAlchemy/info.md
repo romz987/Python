@@ -15,7 +15,7 @@ db.session.add(object)
 db.session.commit()
 ```
 
-MERGE
+MERGE  
 Назначение: "Подтягивает" состояние объекта в сессию (SELECT + INSERT/UPDATE).
 ```python
 record = Model(id=1, name="Updated Name")
@@ -23,7 +23,7 @@ db.session.merge(record)  # Если id=1 существует, обновит �
 db.session.commit()
 ```
 
-DELETE 
+DELETE   
 Назначение: Помечает объект для удаления.
 ```python
 record = StoreModel.query.get(1)
@@ -31,7 +31,7 @@ db.session.delete(record)
 db.session.commit()  # Выполнит DELETE
 ```
 
-EXPIRE 
+EXPIRE   
 Назначение: Сбрасывает загруженные атрибуты объекта (при следующем обращении к ним будет выполнен SELECT).
 ```python
 store = StoreModel.query.get(1)
@@ -39,47 +39,47 @@ db.session.expire(store)  # Следующий доступ к store.name выз
 ```
 
 
-REFRESH
+REFRESH  
 Назначение: Немедленно перезагружает состояние объекта из БД
 
-BULK_SAVE_OBJECTS
+BULK_SAVE_OBJECTS  
 Назначение: Массовая вставка/обновление (без вызова событий SQLAlchemy)
 
-BULK_INSERT_MAPPING
+BULK_INSERT_MAPPING  
 Назначение: Массовая вставка через словари (высокая производительность)
 
 
 
 ## Получение данных
-QUERY.GET()  
+QUERY.GET()    
 Получение по первичному ключу
 ```python
 store = StoreModel.query.get(1)  # Возвращает StoreModel или None
 ```
 
 
-QUERY.FIRST()
+QUERY.FIRST()  
 Первая запись
 ```python 
 store = StoreModel.query.filter_by(marketplace='wb').first()
 ```
 
 
-QUERY.ALL()
+QUERY.ALL()  
 Все записи
 ```python
 all_stores = StoreModel.query.all()  # Список всех StoreModel
 ```
 
 
-QUERY.FILTER_BY()
+QUERY.FILTER_BY()  
 Фильтрация по точным значениям
 ```python
 wb_stores = StoreModel.query.filter_by(marketplace='wb').all()
 ```
 
 
-QUERY.FILTER()
+QUERY.FILTER()  
 Гибкая фильтрация (с условиями)
 ```python
 from sqlalchemy import or_
@@ -91,23 +91,23 @@ stores = StoreModel.query.filter(
 ```
 
 
-МЕТОДЫ АГРЕГАЦИИ
-QUERY.COUNT()
+МЕТОДЫ АГРЕГАЦИИ  
+QUERY.COUNT()  
 Количество записей
 ```python
 count = StoreModel.query.filter_by(marketplace='oz').count()
 ```
 
 
-QUERY.WITH_ENTITIES()
-Выбор конкретных полей
+QUERY.WITH_ENTITIES()  
+Выбор конкретных полей  
 ```python 
 names = StoreModel.query.with_entities(StoreModel.store_name).all()
 ```
 
 
-QUERY.DISCTINCT()
-Уникальные значения 
+QUERY.DISCTINCT()  
+Уникальные значения   
 ```python 
 unique_markets = StoreModel.query.with_entities(
     StoreModel.marketplace
@@ -116,8 +116,8 @@ unique_markets = StoreModel.query.with_entities(
 
 
 ## Сложные запросы (SQLAlchemy Core)
-SELECT()
-Современный стиль (SQLAlchemy 2.x)
+SELECT()  
+Современный стиль (SQLAlchemy 2.x)  
 ```python
 from sqlalchemy import select
 stmt = select(StoreModel).where(StoreModel.marketplace == 'wb')
@@ -125,8 +125,8 @@ stores = db.session.execute(stmt).scalars().all()
 ```
 
 
-TEXT()
-RAW SQL (для сложных случаев) 
+TEXT()  
+RAW SQL (для сложных случаев)   
 ```python
 from sqlalchemy import text
 result = db.session.execute(text("SELECT * FROM stores WHERE marketplace='oz'"))
@@ -134,15 +134,15 @@ result = db.session.execute(text("SELECT * FROM stores WHERE marketplace='oz'"))
 
 
 ## Оптимизированные запросы
-QUERY.JOIN()
-Соединение таблиц
+QUERY.JOIN()  
+Соединение таблиц  
 ```python
 stores_with_products = StoreModel.query.join(ProductModel).all()
 ```
 
 
-QUERY.OPTIONS()
-Жадная загрузка 
+QUERY.OPTIONS()  
+Жадная загрузка   
 ```python
 from sqlalchemy.orm import joinedload
 stores = StoreModel.query.options(joinedload(StoreModel.products)).all()
@@ -151,23 +151,23 @@ stores = StoreModel.query.options(joinedload(StoreModel.products)).all()
 
 
 ## Специальные методы для работы с транзакциями
-COMMIT()   
-Фиксирует все изменения в БД  
+COMMIT()     
+Фиксирует все изменения в БД    
   
-ROLLBACK()   
-Откатывает несохраненные изменения  
+ROLLBACK()     
+Откатывает несохраненные изменения    
   
-BEGIN NESTED()  
-Создает вложенную транзакцию (полезно для частичных откатов)  
+BEGIN NESTED()    
+Создает вложенную транзакцию (полезно для частичных откатов)    
 
 
 
 ## Методы для запросов
 EXECUTE  
-Выполняет произвольный SQL-запрос или выражение SQLAlchemy
+Выполняет произвольный SQL-запрос или выражение SQLAlchemy  
 
-SCALARS
-Возвращает результаты запроса в виде скалярных значений
+SCALARS  
+Возвращает результаты запроса в виде скалярных значений  
 
 
 
