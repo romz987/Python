@@ -15,8 +15,32 @@ db.session.add(object)
 db.session.commit()
 ```
 
+UPDATE  
+Обновляет запись в базе данных.  
+    - Позволяет обновлять записи по любым условиям, заданным в фильтре  
+    - Не возвращает экземпляры объектов, а просто выполняет обновление  
+    - Может обновлять НЕСКОЛЬКО записей одновременно  
+```python
+# Предположим, что вы хотите обновить запись с id = 1
+store_id = 1
+new_store_name = 'New Store Name'
+new_marketplace = 'oz'
+
+# Выполнение обновления
+db.session.query(StoreModel).filter(StoreModel.id == store_id).update({
+    'store_name': new_store_name,
+    'marketplace': new_marketplace
+})
+# Сохранение изменений в базе данных
+db.session.commit()
+```
+
+
 MERGE  
-Назначение: "Подтягивает" состояние объекта в сессию (SELECT + INSERT/UPDATE).
+Назначение: "Подтягивает" состояние объекта в сессию (SELECT + INSERT/UPDATE).  
+    - Обновляет запись только по ID
+    - Если запись не существует СОЗДАСТ новую запись!  
+    - Возвращает новый экземпляр объекта, связанный с текущей сессией
 ```python
 record = Model(id=1, name="Updated Name")
 db.session.merge(record)  # Если id=1 существует, обновит запись

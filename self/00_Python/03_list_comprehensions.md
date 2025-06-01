@@ -67,8 +67,7 @@ for x in range(-3, 3):
 
 
 ## Cоздаем список словарей 
-В данном случае all_records - это 
-
+В данном случае all_records - это список объектов модели SQLAlchemy
 
 return [
     {
