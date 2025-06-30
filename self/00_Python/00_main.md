@@ -4,16 +4,21 @@
 
 [Полезные ссылки](#Полезные-ссылки)    
 [Общие сведения](#Общие-сведения)  
-[Pythonic](#Pythonic)
+[Pythonic](#Pythonic)  
+[Good Python Code](#Good-Python-Code)  
+[CI and Makefile](#CI-and-Makefile)  
+[Pythonic examples](#Pythonic-examples)  
 
 
 
 ----
 ## Полезные ссылки
+Самые полезные  
+[Roadmap Python](https://roadmap.sh/python)
+[Real Python](https://realpython.com/)
 
-[Roadmap Python](https://roadmap.sh/python)  
+Остальные  
 [Неофициальный перевод официального руководства](https://digitology.tech/docs/python_3/tutorial/introduction.html)  
-
 [Про Python от Selectel](https://selectel.ru/blog/courses/course-python/?utm_source=habr.com&utm_medium=referral&utm_campaign=academy_news_pythoncourse_310125_academy)  
 
 
@@ -36,6 +41,7 @@
 
     в JAVA, например, можно явно указать для функции экземпляром какого класса должен быть переданный аргумент.
     И если это условие не выполняется, функция вернет ошибку.
+
 
 
 ----
@@ -69,6 +75,7 @@ PYTHONIC это:
     - Читаемость имеет значение   
 
 4. Идиоматичность:  
+    - Использование синтаксического сахара
     - Использование enumerate вместо ручного счетчика   
     - Использование zip() для итерации по нескольким спискам  
     - Примнение with open() as f: для работы с файлами     
@@ -85,3 +92,86 @@ PYTHONIC это:
 3. [PEP 257 – Документирование кода](https://peps.python.org/pep-0257/)
 
 
+
+----
+## Good Python Code 
+Принципы "Хорошего" Python кода:
+
+1. Читаемость:  
+    - Именование  
+    - PEP-8(импорты: strandart library, third-party, local imports, констатны(MAX_SIZE=), etc) 
+    - Комментарии  
+
+2. Эффективность и оптимизация:
+    - KISS (избегание сложности)
+    - Генераторы (yield)
+    - Встроенные функции (map(), filter(), list comprehensions, dict comprehensions)
+
+3. Документирование
+    - Docstrings (PEP-257)
+    - Типизация: аннотации типов (PEP 484)
+
+4. Тестируемость
+    - Модульность (код разбит на небольшие функции, классы)
+    - Чистые функции (минимизация побочных эффектов)
+    - Unit-тесты (использование pytest/unittest)
+
+6. Идиоматичность (Pythonic way)
+    - Контекстные менеджеры 
+    - Распаковка (a, b = b, a)
+    - Использование '_' для неиспользуемых переменных (for _ in ...)
+
+7. Безопасность и обработка ошибок
+    - LBYL vs EAFP
+
+8. Совместимость и зависимости
+    - Виртуальные окружения (venv, poetry, etc)
+    - Requirements: указание версий пакетов
+
+Литература:  
+1. "Чистый Python: тонкости программирования для профи" - Дэн Бейдер
+2. "Python. К вершинам мастерства" - Лучано Рамальо
+3. "Python. Лучшие практики и инструменты" - Бретт Слаткин
+4. Официальная документация: docs.python.org/3/ - разделы "Учебник" и "Стиль кода"
+
+
+
+----
+## CI and Makefile
+GitHub Actions, Makefile и "requirements stack step" в контексте CI/CD
+
+
+
+----
+## Pythonic examples 
+Одновременный доступ к индексу и элементу
+```python
+# Плохая практика
+for i in range(len(my_list)):
+    print(i, my_list[i])
+
+# Pythonic
+for index, item in enumerate(my_list):
+    print(index, item)
+``` 
+
+
+Итерация по нескольким спискам
+```python
+names = ["Алиса", "Боб"]
+scores = [90, 85]
+
+# Плохая практика
+for i in range(len(names)):
+    print(names[i], scores[i])
+
+# Pythonic 
+for name, score in zip(names, scores):
+    print(name, score)
+```
+
+
+Распаковка
+```python
+a, b = b, a
+```
