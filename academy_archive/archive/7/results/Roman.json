@@ -1,0 +1,7 @@
+{
+    "rural": true,
+    "fortune": true,
+    "exercise": true,
+    "suggest": true,
+    "except": false
+}

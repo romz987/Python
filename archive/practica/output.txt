@@ -1,6 +1,0 @@
-**Дом**шняя работа
-Модуль 5.1: Кортежи, множества
-https://github.com/romz&&&/python425/tree/master/homework/5-1
-
-Репо&&&орий для домашних и классных работ python425
-https://github.com*romz987/python425****
