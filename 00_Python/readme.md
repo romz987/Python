@@ -2,17 +2,18 @@
   
 ## Содержание    
     
-00_main                  - общая информация о Python    
-01_history.md            - краткий экскурс в историю Python   
-02_datatypes_and_vars    - типы данных и переменные в Python      
-03_list_comprehensions   - списковые выражения, словарные выражения     
-04_zip_map               - ZIP() and MAP()    
-05_functions             - Функции и лямбда-функции    
-06_closures              - Замыкания  
-07_decorators            - Декораторы      
-08_imports               - Импорты      
-09_generators            - Генераторы  
-10_iterators             - Итераторы  
+00_main                         - общая информация о Python    
+01_history.md                   - краткий экскурс в историю Python   
+02_datatypes_and_vars           - типы данных и переменные в Python      
+03_list_comprehensions          - списковые выражения, словарные выражения     
+04_zip_map                      - ZIP() and MAP()    
+05_functions                    - Функции и лямбда-функции    
+06_closures                     - Замыкания  
+07_decorators                   - Декораторы      
+08_imports                      - Импорты      
+09_generators                   - Генераторы  
+10_iterators                    - Итераторы  
+99_complement_code_quality      - Приложение 1: Критерии качества python-кода
   
 
 
@@ -20,9 +21,10 @@
 ## Темы ищут место
 
 ### Важное  
-0. Виртуальные окружения (venv, poetry, uv)  
-1. GIL, асинхронность и многопоточность  
-2. Парадигмы и ООП в них
+0. Профилирование
+1. Виртуальные окружения (venv, poetry, uv)  
+2. GIL, асинхронность и многопоточность  
+3. Парадигмы и ООП в них
 
 
 ### Разное  
