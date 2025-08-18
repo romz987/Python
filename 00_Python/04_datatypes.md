@@ -70,19 +70,25 @@ ______________________________________________________________________
 
 ## Annex A
 
-> [!NOTE] Общая иерархия типов данных
-> ![common-classification](./images/04_datatypes/common-classification.svg)
+> [!NOTE]
+> Общая иерархия типов данных
+
+![common-classification](./images/04_datatypes/common-classification.svg)
 
 ______________________________________________________________________
 
 ## Annex B
 
-> [!NOTE] Часть иерархии типов
-> ![common-types-classification](./images/04_datatypes/common-types-classification.svg)
+> [!NOTE]
+> Часть иерархии типов
+
+![common-types-classification](./images/04_datatypes/common-types-classification.svg)
 
 ______________________________________________________________________
 
 ## Annex C
 
-> [!NOTE] Иерархия типов по критерию изменямости
-> ![common-types-classification](./images/04_datatypes/mutableness-classification.svg)
+> [!NOTE]
+> Иерархия типов по критерию изменяемости
+
+![common-types-classification](./images/04_datatypes/mutableness-classification.svg)
